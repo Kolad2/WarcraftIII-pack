@@ -65,12 +65,14 @@ C:\Users\username\IdeaProjects\MyMapProject
 🇷🇺 Скрипт запускающий сборку. Принимает таблицу аргументов `{}`.
 
 🇬🇧 A script that launches the build process. Accepts a table with arguments `{}`.
+
 ```lua
-require 'build' {}
+require 'pack' {}
 ```
 ### Параметры по умолчанию / Default parameters
+
 ```lua
-require 'build' {
+require 'pack' {
     game = nil,
     project = nil,
     map = 'map.w3x',
@@ -86,8 +88,9 @@ require 'build' {
 ### Параметры сборки / Build parameters
 
 #### `game`
+
 ```lua
-require 'build' {
+require 'pack' {
     game = [[D:\Games\Warcraft III\x86_64]]
 }
 ```
@@ -101,8 +104,9 @@ require 'build' {
 - InstallLocation
 
 #### `project`
+
 ```lua
-require 'build' {
+require 'pack' {
     project = "C:\\Users\\username\\IdeaProjects\\MyMapProject"
 }
 ```
@@ -110,42 +114,47 @@ require 'build' {
 
 🇬🇧 Path to project folder. By default it's the folder where from `build.lua` is launched.
 #### `map`
+
 ```lua
-require 'build' {
-    map = 'map.w3x' 
+require 'pack' {
+    map = 'map.w3x'
 }
 ```
 🇷🇺 Название карты. По умолчанию `map.w3x` в корне проекта.
 
 🇬🇧 Map name. By default it's `map.w3x` in project root.
 #### `src`
+
 ```lua
-require 'build' {
+require 'pack' {
     src = 'src'
 }
 ```
+
 ```lua
-require 'build' {
+require 'pack' {
     src = {
-            'src\\lib', 
-            'src\\ability',
-            'src\\init.lua'
-    } 
+        'src\\lib',
+        'src\\ability',
+        'src\\init.lua'
+    }
 }
 ```
 🇷🇺 Порядок сборки файлов. По умолчанию вся папка `src` в корне проекта.
 
 🇬🇧 Build order of files. By default the entire `src` folder in project root.
 #### `run`
+
 ```lua
-require 'build' {
+require 'pack' {
     -- 🇷🇺 после сборки запустит карту в игре
     -- 🇬🇧 will run game after building
-    run = 'game' 
+    run = 'game'
 }
 ```
+
 ```lua
-require 'build' {
+require 'pack' {
     -- 🇷🇺 после сборки откроет карту в редакторе
     -- 🇬🇧 will run editor after building
     run = 'editor'
@@ -158,7 +167,7 @@ require 'build' {
 #### `syntaxCheck`
 
 ```lua
-require 'build' {
+require 'pack' {
     syntaxCheck = true
 }
 ```
@@ -167,12 +176,13 @@ require 'build' {
 🇬🇧 Check map's code `war3map.lua` for syntax errors before launch. Uses `luac`, that's usually installed together with `lua`. If it's not found, install a complete Lua distribution.
 
 #### `options`
+
 ```lua
-require 'build' {
-	options = {
-		language = "ru",
-		consoleColor = true,
-	}
+require 'pack' {
+    options = {
+        language = "ru",
+        consoleColor = true,
+    }
 }
 ```
 🇷🇺 Таблица содержит настройки программы сборки. Можно переключить язык или выключить цвета в консоли.
@@ -187,4 +197,6 @@ require 'build' {
 
 - 🇬🇧 You must set line-endings for `.lua` files to `CRLF` mode.
 
+## Support
 
+<a href="https://www.buymeacoffee.com/nazarpunk"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=nazarpunk&button_colour=BD5FFF&font_colour=ffffff&font_family=Cookie&outline_colour=000000&coffee_colour=FFDD00" /></a>
